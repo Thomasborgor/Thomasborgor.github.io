@@ -17,9 +17,9 @@ _Open -28:836 to 73:FF2 Standard Galactic Time (5:00+)_
 
 
 
-*Ingredients not from this planet \n
-**We don't value you. \n
-***Not scientifically proven \n
-****Depends on the person \n
-*****We call it that \n
-******We might've, you'll never know \n
+*Ingredients not from this planet  
+**We don't value you.  
+***Not scientifically proven  
+****Depends on the person  
+*****We call it that  
+******We might've, you'll never know  
