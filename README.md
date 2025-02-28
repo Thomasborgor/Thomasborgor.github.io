@@ -24,6 +24,62 @@ _Open -28:836 to 73:FF2 Standard Galactic Time (5:00+)_
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \*Ingredients not from this planet  
 \*\*We don't value you.  
 \*\*\*Not scientifically proven  
