@@ -61,34 +61,48 @@
 	
 	.Statistics {
 		max-width: 100%;
-		margin: 20px;
-		font-size: 20px;
-		justify-content: center;
-		align-items: center;
+		margin: 20px auto; /* Centers the table */
+		font-size: 18px;
 		text-align: left;
 		background-color: white;
 		border: 1px solid #ddd;
+		border-radius: 8px; /* Adds rounded corners */
+		overflow: hidden; /* Ensures rounded borders apply properly */
 	}
 
 	.Statistics table {
 		border-collapse: collapse;
 		width: 100%;
-		height: 60%;
-		
 	}
 
-	.Statistics th {
-		border: 1px solid #ddd;
-		width: 100%;
-		padding: 20px;
-	}
-	
+	.Statistics th,
 	.Statistics td {
 		border: 1px solid #ddd;
-		padding: 8px;
-		width: 120%;
-		height: 60%;
+		padding: 12px;
+		text-align: center;
 	}
+	
+	.Statistics th {
+		background-color: #f4f4f4; /* Light gray background for headers */
+		font-weight: bold;
+	}
+	
+	.Statistics tr:nth-child(even) {
+		background-color: #f9f9f9; /* Alternating row colors */
+	}
+
+	.Statistics tr:hover {
+		background-color: #f1f1f1; /* Highlight row on hover */
+	}
+
+	/* Making the first column smaller */
+	.Statistics td:first-child,
+	.Statistics th:first-child {
+		width: 50px; /* Adjust the size as needed */
+		white-space: nowrap;
+		text-align: center;
+	}
+
 	
 
 		
@@ -150,7 +164,7 @@
 <div class="Statistics">
 	<table>
 		<tr>
-			<th>         </th>
+			<th></th>
 			<th>Life Insurance</th>
 			<th>Medicaid</th>
 			<th>No insurance</th>
