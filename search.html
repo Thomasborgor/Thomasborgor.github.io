@@ -2,14 +2,34 @@
 <html>
 <head>
 <title>bozo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+	#searching {
+	font-family: 'Poppins', sans-serif;
+	font-size: 24px;
+	}
+</style>
+<script>
+    function addTrailingDots() {
+      const searchingElement = document.getElementById("searching");
+      let dotsCount = 0;
+      const maxDots = 3;
+      
+      // Function to add dots
+      function updateText() {
+        searchingElement.textContent = "Searching" + ".".repeat(dotsCount);
+        dotsCount = (dotsCount + 1) % (maxDots + 1);  // Reset after 3 dots
+      }
+
+      setInterval(updateText, 500);  // Update every 500ms
+    }
+    
+    window.onload = addTrailingDots;  // Start when the page loads
+  </script>
 </head>
 
 <body>
-
-<p>im not that good at programming.<br>also what could you possibly be searching up right now?<br></p>
-<br>
-<a href="index.html" style="color: black; font-size: 18px;"><strong>Click to return to the home page<strong></a>
-<br><br><br><br><br>
-
+<div id="searching">Searching</div>
 </body>
 </html>
