@@ -61,107 +61,48 @@
 		
 	}
 	
-.Statistics {
-    max-width: 100%;
-    margin: 20px auto;
-    font-size: 18px;
-    text-align: left;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-}
+	.Statistics {
+		max-width: 100%;
+		margin: 20px auto; /* Centers the table */
+		font-size: 18px;
+		text-align: left;
+		background-color: white;
+		border: 1px solid #ddd;
+		border-radius: 8px; /* Adds rounded corners */
+		overflow: hidden; /* Ensures rounded borders apply properly */
+	}
 
-/* Make the table container scrollable on small screens */
-.Statistics-container {
-    width: 100%;
-    overflow-x: auto; /* Enables horizontal scrolling */
-}
+	.Statistics table {
+		border-collapse: collapse;
+		width: auto;
+	}
 
-.Statistics table {
-    border-collapse: collapse;
-    width: 100%;
-    min-width: 600px; /* Prevents columns from getting too small */
-}
+	.Statistics th,
+	.Statistics td {
+		border: 1px solid #ddd;
+		padding: 12px;
+		text-align: center;
+	}
+	
+	.Statistics th {
+		background-color: #f4f4f4; /* Light gray background for headers */
+		font-weight: bold;
+	}
+	
+	.Statistics tr:nth-child(even) {
+		background-color: #f9f9f9; /* Alternating row colors */
+	}
 
-.Statistics th,
-.Statistics td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
-}
 
-.Statistics th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-}
+	/* Making the first column smaller */
+	.Statistics td:first-child,
+	.Statistics th:first-child {
+		width: 30%; /* Adjust the size as needed */
+		white-space: nowrap;
+		text-align: center;
+	}
 
-.Statistics tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.Statistics tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Adjust first column size */
-.Statistics td:first-child,
-.Statistics th:first-child {
-    width: 50px;
-    white-space: nowrap;
-    text-align: center;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .Statistics {
-        font-size: 16px; /* Reduce text size */
-    }
-    
-    .Statistics th, .Statistics td {
-        padding: 8px; /* Reduce padding */
-    }
-    
-    /* Stack table into blocks if screen is too small */
-    @media (max-width: 480px) {
-        .Statistics table {
-            display: block;
-        }
-
-        .Statistics thead {
-            display: none; /* Hide headers */
-        }
-
-        .Statistics tr {
-            display: block;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            background-color: white;
-        }
-
-        .Statistics td {
-            display: block;
-            text-align: right;
-            padding-left: 50%;
-            position: relative;
-        }
-
-        .Statistics td:first-child {
-            text-align: center;
-            font-weight: bold;
-            padding-left: 0;
-            width: 100%;
-        }
-
-        .Statistics td::before {
-            content: attr(data-label);
-            position: absolute;
-            left: 10px;
-            font-weight: bold;
-            text-align: left;
-        }
-    }
-}
+	
 
 		
 	</style>
@@ -219,37 +160,36 @@
 		
 	</div>
 
-<div class="Statistics-container">
-    <div class="Statistics">
-        <table>
-            <tr>
-                <th></th>
-                <th>Life Insurance</th>
-                <th>Medicaid</th>
-                <th>No insurance</th>
-            </tr>
-            <tr>
-                <td data-label="Years">1 Year</td>
-                <td data-label="Life Insurance">$500 no credit</td>
-                <td data-label="Medicaid">$200 no credit</td>
-                <td data-label="No Insurance">Full salary no credit</td>
-            </tr>
-            <tr>
-                <td data-label="Years">2 Years</td>
-                <td data-label="Life Insurance">$1200 w/ credit</td>
-                <td data-label="Medicaid">$600 w/ credit</td>
-                <td data-label="No Insurance">Full salary + $30 credit</td>
-            </tr>
-            <tr>
-                <td data-label="Years">3+ Years</td>
-                <td data-label="Life Insurance">Year amount * 450 + $300 credit</td>
-                <td data-label="Medicaid">$1 no credit</td>
-                <td data-label="No Insurance">Full salary with $400 in retirement</td>
-            </tr>
-        </table>
-    </div>
+<div class="Statistics">
+	<table>
+		<tr>
+			<th></th>
+			<th>Life Insurance</th>
+			<th>Medicaid</th>
+			<th>No insurance</th>
+		</tr>
+		<tr>
+			<td>1 Year</td>
+			<td>$500 no credit</td>
+			<td>$200 no credit</td>
+			<td>Full salary no credit</td>
+		</tr>
+		<tr>
+			<td>2 Years</td>
+			<td>$1200 w/ credit</td>
+			<td>$600 w/ credit</td>
+			<td>Full salary + $30 credit</td>
+		</tr>
+		<tr>
+			<td>3+ Years</td>
+			<td>Year amount * 450 + $300 credit</td>
+			<td>$1 no credit</td>
+			<td>Full salary with $400 in retirement</td>
+		</tr>
+		
+	</table>
+	
 </div>
-
 <div class="bottom_text">
 	<h3>Bonus's and Raises</h3>
 	<img src="graph.jpg" alt="Really cool graph">
