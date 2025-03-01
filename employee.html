@@ -18,12 +18,47 @@
         margin: 0;
 		width: 100%;
 	}
+	
+	.first_part {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100vh;
+		margin: 0;
+	}
+	.image {
+		flex: 1;
+		max-width: 50%;
+		text-align: center;
+	}
+	
+	.side_text {
+		flex: 1;
+		padding: 20px;
+		max-width: 50%;
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	
 		
 	</style>
 </head>
 
 <body>
-<p>Hi</p>
+
+<div class="first_part">
+	<div class="image">
+		<img src="man.jpg" alt="Boss man">
+	</div>
+	<div class="side_text">
+		<h1>Welcome new hires!</h1>
+		<p>We at A's Bar and Grill are happy to have new hires here.<br>
+	</div>
+</div>
+
 </body>
 
 
