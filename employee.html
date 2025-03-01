@@ -72,7 +72,6 @@
 
 	.Statistics table {
 		border-collapse: collapse;
-		border: 1px solid #ddd;
 		width: 100%;
 		height: 60%;
 		
@@ -84,13 +83,13 @@
 		padding: 20px;
 	}
 	
-	
-	.actual_table_data td {
-		width: 100%;
+	.Statistics td {
 		border: 1px solid #ddd;
-		border-collapse: collapse;
+		padding: 8px;
+		width: 120%;
 		height: 60%;
 	}
+	
 
 		
 	</style>
@@ -151,34 +150,28 @@
 <div class="Statistics">
 	<table>
 		<tr>
-			<th></th>
+			<th style="width: 40%;"></th>
 			<th>Life Insurance</th>
 			<th>Medicaid</th>
 			<th>No insurance</th>
 		</tr>
 		<tr>
-			<td style="border: 1px solid #ddd;">1 Year</td>
-			<div class="actual_table_data">
+			<td>1 Year</td>
 			<td>$500 no credit</td>
 			<td>$200 no credit</td>
 			<td>Full salary no credit</td>
-			</div>
 		</tr>
 		<tr>
-			<td style="border: 1px solid #ddd;">2 Years</td>
-			<div class="actual_table_data">
+			<td>2 Years</td>
 			<td>$1200 w/ credit</td>
 			<td>$600 w/ credit</td>
 			<td>Full salary + $30 credit</td>
-			</div>
 		</tr>
 		<tr>
-			<td style="border: 1px solid #ddd;">3+ Years</td>
-			<div class="actual_table_data">
+			<td>3+ Years</td>
 			<td>Year amount * 450 + $300 credit</td>
 			<td>$1 no credit</td>
 			<td>Full salary with $400 in retirement</td>
-			</div>
 		</tr>
 		
 	</table>
