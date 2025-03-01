@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A's Bar and Grill</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+	<script>
+	function HandleEnterKey(event) {
+		if (event.key === "Enter") {
+			window.location.href = "search.html";
+		}
+	}
+	</script>
+	
     <style>
         .top_bar {
             background-color: rgba(0, 0, 255, 0.5);
@@ -78,14 +86,14 @@
     <div class="top_bar">
         <img src="logo.jpg" alt="Our logo">
         <p>A's Bar and Grill</p>
-        <input type="text" class="search_bar" placeholder="Search...">
+        <input type="text" class="search_bar" onkeydown="HandleEnterKey(event)" placeholder="Search...">
     </div>
     <br><br><br><br>
     <h1>Welcome to A's Bar and Grill!</h1>
 
     <h2>All your this-worldly needs, like food!</h2>
 
-    <a href="employee.html" style="color: black;"><em>CLICK IF YOU ARE AN EMPLOYEE</em></a>
+    <a href="employee.html" style="color: black; font-size: 20px;"><em>CLICK IF YOU ARE AN EMPLOYEE</em></a>
 
     <p>Here at A's Bar and Grill, we only serve you the <em>finest</em> of ingredients*.<br>
     We value** our customers, unlike other restaurants***.<br>
