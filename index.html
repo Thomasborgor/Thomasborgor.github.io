@@ -8,8 +8,7 @@
 	<script>
 	function HandleEnterKey(event) {
 		if (event.key === "Enter") {
-			let message = document.getElementById('search_bar_id').value;
-			if (message.uppercase == "ALIEN") {
+			if (document.getElementById('search_bar_id').value.toLowerCase() == "alien") {
 				window.location.href = "alien.html";
 				return;
 			}
