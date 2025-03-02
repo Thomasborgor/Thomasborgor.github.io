@@ -1,2 +1,14 @@
-notanalien,getoffmysaucer
-thomasborgor,password
+nate,password
+tommy,password
+michael,password
+justin,password
+charles,password
+alien,password
+juliana,password
+emma,password
+catie,password
+audrey,password
+philip,password
+ivan,password
+claire,password
+samina,password
