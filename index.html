@@ -8,9 +8,10 @@
 	<script>
 	function HandleEnterKey(event) {
 		if (event.key === "Enter") {
-			let inputValue = document.getElementById('search_bar_id').value.trim().toLowerCase();
+			let inputValue = document.getElementById('search_bar_id').value.trim().toUpperCase();
 	
-			if (inputValue === "alien") {
+			if (inputValue === "ALIEN") {
+				alert(inputValue);
 				window.location.href = "alien.html";
 				return;
 			}
