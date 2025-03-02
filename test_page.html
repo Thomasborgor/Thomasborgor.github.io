@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>test</title>
+<script>
+	let counterAmount = 0;	
+	function addOne() {
+		const counterDiv = document.getElementById("counter");
+		counterAmount++;
+		
+		counterDiv.textContent = counterAmount;
+	}
+
+</script>
+</head>
+
+
+
+<body>
+
+<input type="button" onclick="addOne()">Click me!</input>
+<div id="counter"></div>
+</body>
+
+</html>
