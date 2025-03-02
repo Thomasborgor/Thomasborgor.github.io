@@ -6,6 +6,34 @@
     <title>A's Bar and Grill</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 	<script>
+	
+	document.getElementById("loginForm").addEventListener("submit", function (event) { //runs when submit button is pressed
+		event.preventDefault(); //prevents page from reloading on submit
+		
+		let username = document.getElementById("username").value.trim(); //gets username & password from text box and gets rid of spaces
+		let password = document.getElementById("password").value.trim(); 
+		
+		fetch("users.txt") //loads user.txt into mem
+			.then(response => response.text()) 
+			.then(data => { //lets below code know what the text contents of user.txt are
+				let users = data.split("\n").map(line => line.trim());
+				let validUser = users.find(user => {
+					let [storedUser, storedPass] = user.split(",");
+					return storedUser === username && storedPass === password;
+				
+				});
+			
+			if (validUser) {
+				window.location.href("control_panel.html");
+			} else {
+				document.getElementById("error").textContent = "Invalid credentials!";
+			}
+			
+			})
+		.catch(error => console.log("error: ", error));
+	});
+	
+	
 	function HandleEnterKey(event) {
 		if (event.key === "Enter") {
 			let inputValue = document.getElementById('search_bar_id').value.trim().toUpperCase();
@@ -142,6 +170,17 @@
 		</form>
 	</div>
 	
+	<br>
+	<br>
+	
+	<form id="loginForm">
+		<label for="username">Enter admin username:</label><br>
+		<input type="text" id="email"><br>
+		<label for="password">Enter admin password:</label><br>
+		<input type="password" id="password"><br>
+		<input type="submit" value="Continue">
+	</form>
+	<div id="errored" style="color: red;"></div>
 	
     <br><br><br>
     <div class="ps_note">
