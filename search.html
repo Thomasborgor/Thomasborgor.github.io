@@ -11,26 +11,53 @@
 	}
 </style>
 <script>
-    function addTrailingDots() {
-      const searchingElement = document.getElementById("searching");
-      let dotsCount = 0;
-      const maxDots = 3;
-      
-      // Function to add dots
-      function updateText() {
-        searchingElement.textContent = "Searching" + ".".repeat(dotsCount);
-        dotsCount = (dotsCount + 1) % (maxDots + 1);  // Reset after 3 dots
-      }
+const messageArray = [
+  "Accessing database...",
+  "Hacking into the firewall...",
+  "Taking coffee break...",
+  "Reading metadata...",
+  "Altering byte packets...",
+  "Copying buffer to memory...",
+  "Installing Windows update... This may take a few hours.",
+  "Disposing of bad sectors...",
+  "Waiting for 192.168.12.256 to ping...",
+  "Dramatic!"
+];
 
-      setInterval(updateText, 1000);  // Update every 500ms
-    }
+function addTrailingDots() {
+  const searchingElement = document.getElementById("searching");
+  let dotsCount = 0;
+  let dotCount = 0;
+  let dotLimit = Math.floor(Math.random() * 4) + 1;
+  const maxDots = 3;
+  const messageDiv = document.getElementById("random_message");
+
+  function updateText() {
+    searchingElement.textContent = "Searching" + ".".repeat(dotsCount);
+    dotsCount = (dotsCount + 1) % (maxDots + 1);  // Reset after 3 dots
     
-    window.onload = addTrailingDots;  // Start when the page loads
+    dotCount++;
+    if (dotCount >= dotLimit) {
+      dotCount = 0;
+      dotLimit = Math.floor(Math.random() * 4) + 1;
+
+      // Pick a random message and add it to the div
+      let randomMessage = messageArray[Math.floor(Math.random() * messageArray.length)];
+      messageDiv.innerHTML += "<br>" + randomMessage;
+    }
+  }
+
+  setInterval(updateText, 1000); // Update every second
+}
+
+window.onload = addTrailingDots;
+
   </script>
 </head>
 
 <body>
 <div id="searching">Searching</div>
+<div id="random_text"></div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <p>yeah there is no such thing as search</p>
 <a href="index.html" style="color: black; font-size: 18px;"><strong>Click to return to the home page<strong></a>
