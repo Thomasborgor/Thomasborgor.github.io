@@ -9,9 +9,8 @@
 	function HandleEnterKey(event) {
 		if (event.key === "Enter") {
 			if (document.getElementById('search_bar_id').value == "alien") {
-				alert("hi");
 				window.location.href = "alien.html";
-				break;
+				return;
 			}
 			
 			window.location.href = "search.html";
