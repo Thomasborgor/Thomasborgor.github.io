@@ -8,16 +8,17 @@
 	<script>
 	function HandleEnterKey(event) {
 		if (event.key === "Enter") {
-			if (document.getElementById('search_bar_id').value.toLowerCase() == "alien") {
+			let inputValue = document.getElementById('search_bar_id').value.toLowerCase();
+	
+			if (inputValue === "alien") {
 				window.location.href = "alien.html";
 				return;
 			}
-			
+	
 			window.location.href = "search.html";
 		}
-	
 	}
-	
+
 	function alert_user() {
 		
 		alert(document.getElementById("email").value + " has just been scammed!");
