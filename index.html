@@ -11,6 +11,11 @@
 			window.location.href = "search.html";
 		}
 	}
+	
+	function alert_user() {
+		let username=document.getElementById("email");
+		alert(username.textContent + " has just been scammed!");
+	}
 	</script>
 	
     <style>
@@ -116,6 +121,17 @@
     <h2>A's Bar and Grill</h2>
 
     <p><em>Open -28:836 to 73:FF2 Standard Galactic Time (5:00+)</em></p>
+	<br><br>
+	<div class="form_signup">
+		<p>Sign up for daily <strong>A's Bar and Grill</strong> updates!</p>
+		<form>
+			<label for="email">Enter your email:</label><br>
+			<input type="text" id="email" placeholder="example@example.com"><br>
+			<input type="submit" value="Submit" onclick="alert_user()">
+		</form>
+	</div>
+	
+	
     <br><br><br>
     <div class="ps_note">
         <p><em>A special thanks to our </em>insterstellar<em> construction crew:<br>Nate, Tommy, James, Claire, Audrey, Michael, Catie, Emma Faye, Samina, Justin, Ivan, Philip, Charles, and Ms. Sweet!</em></p>
