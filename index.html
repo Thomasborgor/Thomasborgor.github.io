@@ -8,8 +8,14 @@
 	<script>
 	function HandleEnterKey(event) {
 		if (event.key === "Enter") {
+			
+			if (document.getElementById("search_bar_id").value === "alien") {
+				window.location.href = "alien.html";
+			}
+			
 			window.location.href = "search.html";
 		}
+	
 	}
 	
 	function alert_user() {
@@ -95,7 +101,7 @@
     <div class="top_bar">
         <img src="logo.jpg" alt="Our logo">
         <p>A's Bar and Grill</p>
-        <input type="text" class="search_bar" onkeydown="HandleEnterKey(event)" placeholder="Search...">
+        <input id="search_bar_id" type="text" class="search_bar" onkeydown="HandleEnterKey(event)" placeholder="Search...">
     </div>
     <br><br><br><br>
     <h1>Welcome to A's Bar and Grill!</h1>
