@@ -5,54 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A's Bar and Grill</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-	<script>
-	
-	document.getElementById("loginForm").addEventListener("submit", function (event) { //runs when submit button is pressed
-		event.preventDefault(); //prevents page from reloading on submit
-		
-		let username = document.getElementById("username").value.trim(); //gets username & password from text box and gets rid of spaces
-		let password = document.getElementById("password").value.trim(); 
-		
-		fetch("users.txt") //loads user.txt into mem
-			.then(response => response.text()) 
-			.then(data => { //lets below code know what the text contents of user.txt are
-				let users = data.split("\n").map(line => line.trim());
-				let validUser = users.find(user => {
-					let [storedUser, storedPass] = user.split(",");
-					return storedUser === username && storedPass === password;
-				
-				});
-			
-			if (validUser) {
-				window.location.href("control_panel.html");
-			} else {
-				document.getElementById("error").textContent = "Invalid credentials!";
-			}
-			
-			})
-		.catch(error => console.log("error: ", error));
-	});
-	
-	
-	function HandleEnterKey(event) {
-		if (event.key === "Enter") {
-			let inputValue = document.getElementById('search_bar_id').value.trim().toUpperCase();
-	
-			if (inputValue === "ALIEN") {
-				window.location.href = "alien.html";
-				return;
-			}
-	
-			window.location.href = "search.html";
-		}
-	}
-
-	function alert_user() {
-		
-		alert(document.getElementById("email").value + " has just been scammed!");
-	}
-	</script>
-	
     <style>
         .top_bar {
             background-color: rgba(0, 0, 255, 0.5);
@@ -61,26 +13,21 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 60px; /* Set a fixed height */
-            padding: 0 20px;
-            display: flex; /* Enable flexbox */
-            align-items: center; /* Vertically center items */
-            z-index: 999;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
-        }
-
-        .top_bar img {
-            height: 40px;
-            width: 60px;
             height: 60px;
-            margin-right: 10%; /* Add space between logo and text */
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-
+        .top_bar img {
+            height: 60px;
+            margin-right: 10%;
+        }
         .top_bar p {
             font-size: 22px;
-            margin-left: 10%; /* Add space between text and search bar */
+            margin-left: 10%;
         }
-
         .search_bar {
             width: 120px;
             padding: 8px;
@@ -88,25 +35,23 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             outline: none;
-            margin-left: 20px; /* Add space between text and search bar */
+            margin-left: 20px;
         }
-
         body {
             font-family: 'Poppins', sans-serif;
-            text-align: center; /* Centers all text */
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh; /* Ensures full height centering */
+            min-height: 100vh;
             margin: 0;
             width: 100%;
-            background-image: url('space.jpg'); /* Path to the image */
-            background-size: cover; /* Ensures the image covers the entire screen */
-            background-position: center; /* Centers the image */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-image: url('space.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-
         .ps_note {
             text-align: left;
             width: 50%;
@@ -114,14 +59,12 @@
             background-color: rgba(255, 255, 255, 0.3);
             height: auto;
         }
-		
-		.form_signup {
-			text-align: center;
-		}
-
+        .form_signup {
+            text-align: center;
+        }
         p, h2 {
-            width: 100%; /* Prevents text from stretching too much */
-            max-width: 800px; /* Limits max width for better readability */
+            width: 100%;
+            max-width: 800px;
         }
     </style>
 </head>
@@ -138,65 +81,86 @@
     <h2>All your this-worldly needs, like food!</h2>
 
     <a href="employee.html" style="color: black; font-size: 20px;"><em>CLICK IF YOU ARE AN EMPLOYEE</em></a>
-	<a href="test_page.html" style="color: black; font-size: 20px;">click me </a>
-
-    <p>Here at A's Bar and Grill, we only serve you the <em>finest</em> of ingredients*.<br>
-    We value** our customers, unlike other restaurants***.<br>
-    We would love to see you come to our delightful**** little abode and try our new food!*****</p>
-
-    <p>We have all new choices to eat, like <strong>Glorpian Stew</strong>, or <strong>Beef</strong>, or even some <strong>Martian Rocks</strong>******.<br>
-    We also just got some <strong>Shirley Temples</strong>, a new drink that we created!*******</p>
+    <a href="test_page.html" style="color: black; font-size: 20px;">click me</a>
 
     <h2>Modern Amenities</h2>
-
     <p>At A's Bar and Grill, we don't have bathrooms.********<br>
     We even have about 4 tables with one chair each!<br>
     Our walls are made out of wood.*********<br>
     We have a sink.<br>
     We have two cabinets on stools.</p>
 
-    <p>Thank you for choosing,</p>
-
     <h2>A's Bar and Grill</h2>
-
     <p><em>Open -28:836 to 73:FF2 Standard Galactic Time (5:00+)</em></p>
-	<br><br>
-	<div class="form_signup">
-		<p>Sign up for daily <strong>A's Bar and Grill</strong> updates!</p>
-		<form>
-			<label for="email">Enter your email:</label><br>
-			<input type="text" id="email" placeholder="example@example.com"><br>
-			<input type="submit" value="Submit" onclick="alert_user()">
-		</form>
-	</div>
-	
-	<br>
-	<br>
-	
-	<form id="loginForm">
-		<label for="username">Enter admin username:</label><br>
-		<input type="text" id="username"><br>
-		<label for="password">Enter admin password:</label><br>
-		<input type="password" id="password"><br>
-		<input type="submit" value="Continue">
-	</form>
-	<p id="errored" style="color: red;"></p>
-	
-    <br><br><br>
-    <div class="ps_note">
-        <p><em>A special thanks to our </em>insterstellar<em> construction crew:<br>Nate, Tommy, James, Claire, Audrey, Michael, Catie, Emma Faye, Samina, Justin, Ivan, Philip, Charles, and Ms. Sweet!</em></p>
+    
+    <div class="form_signup">
+        <p>Sign up for daily <strong>A's Bar and Grill</strong> updates!</p>
+        <form>
+            <label for="email">Enter your email:</label><br>
+            <input type="text" id="email" placeholder="example@example.com"><br>
+            <input type="submit" value="Submit" onclick="alert_user()">
+        </form>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <p>*Ingredients not from this planet</p>
-    <p>**Value as in your money.</p>
-    <p>***Data has shown that other restaurants are better than us</p>
-    <p>****Delightfulness depends on the person</p>
-    <p>*****We like to call it food, but who really checks?</p>
-    <p>******Martian rocks not from Mars. Made in Venus.</p>
-    <p>*******Shirley Temple is a registered Earth trademark #85672191 owned by LEILA ROUHI.</p>
-    <p>********Execretion of bodily fluids and solids are banned in A's Bar and Grill.</p>
-    <p>*********Wood as in it's a very thin dried wood pulp. Good enough, right?</p>
+    <br>
+
+    <h2>Admin Login</h2>
+    <form id="loginForm">
+        <label for="username">Enter admin username:</label><br>
+        <input type="text" id="username"><br>
+        <label for="password">Enter admin password:</label><br>
+        <input type="password" id="password"><br>
+        <input type="submit" value="Continue">
+    </form>
+    <p id="errored" style="color: red;"></p>
+
+    <br><br>
+    <div class="ps_note">
+        <p><em>A special thanks to our interstellar construction crew!</em></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("loginForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form from reloading
+
+                let username = document.getElementById("username").value.trim();
+                let password = document.getElementById("password").value.trim();
+
+                fetch("users.txt")
+                    .then(response => response.text())
+                    .then(data => {
+                        let users = data.split("\n").map(line => line.trim());
+
+                        let validUser = users.find(user => {
+                            let [storedUser, storedPass] = user.split(",");
+                            return storedUser === username && storedPass === password;
+                        });
+
+                        if (validUser) {
+                            window.location.href = "control_panel.html"; // Redirect on success
+                        } else {
+                            document.getElementById("errored").textContent = "Invalid credentials!";
+                        }
+                    })
+                    .catch(error => console.log("Error: ", error));
+            });
+        });
+
+        function HandleEnterKey(event) {
+            if (event.key === "Enter") {
+                let inputValue = document.getElementById('search_bar_id').value.trim().toUpperCase();
+                if (inputValue === "ALIEN") {
+                    window.location.href = "alien.html";
+                    return;
+                }
+                window.location.href = "search.html";
+            }
+        }
+
+        function alert_user() {
+            alert(document.getElementById("email").value + " has just been scammed!");
+        }
+    </script>
 </body>
 </html>
