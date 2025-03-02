@@ -1,1 +1,2 @@
-alien,real
+boss,real_alien
+thomasborgor,password

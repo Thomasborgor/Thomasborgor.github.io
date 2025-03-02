@@ -2,15 +2,81 @@
 <html>
 <head>
 <title>Control Panel</title>
+<style>
+	body {
+		display: flex;
+		position: fixed;
+		background-image: url("ufo.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+	}
+	
+	h1 {
+		background-color: rgba(255, 255, 255, 0.4);
+		
+	
+	}
+	
+	.speedometer {
+		position: absolute;
+		display: flex;
+		left: 70px;
+		bottom: 60px;
+	}
+	
+	.speedometer p {
+		position: absolute;
+		display: flex;
+		font-size: 20px;
+		color: white;
+		bottom: 54px;
+		left: 135px;
+	
+	}
+	
+	.speedometer #upButton {
+		position: absolute;
+		display: flex;
+		font-size: 20px;
+		color: black;
+		bottom: 54px;
+		left: 35px;
+	}
+	.speedometer #downButton {
+		position: absolute;
+		display: flex;
+		font-size: 20px;
+		color: black;
+		bottom: 54px;
+		left: 190px;
+	}
+	
+</style>
 <script>
-
+	let speed = 25
+	function increaseSpeed() {
+		speed++;
+		document.getElementById("speedometer_value").textContent = speed;
+	}
+	
+	function decreaseSpeed() {
+		speed--;
+		document.getElementById("speedometer_value").textContent = speed;
+	}
 </script>
 </head>
 
 
 
 <body>
-
+<h1>Welcome to the <strong>Boss's</strong> UFO and UniCommunications panel.</h1>
+<div class="speedometer">
+<p id="speedometer_value">25</p>
+<img src="speed.jpg" alt="placeholder" style="width: 20%; height: 20%; ">
+<button type="button" id="upButton" onclick="increaseSpeed()">Up</button>
+<button type="button" id="downButton" onclick="decreaseSpeed()">Down</button>
+</div>
 
 
 </body>
