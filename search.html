@@ -46,7 +46,7 @@ function addTrailingDots() {
 
       // Pick a random message and add it to the div
       let randomMessage = messageArray[Math.floor(Math.random() * messageArray.length)];
-      messageDiv.textContent += <br> + randomMessage;
+      messageDiv.textContent += randomMessage + "  ";
     }
   }
 
@@ -59,7 +59,7 @@ window.onload = addTrailingDots;
 </head>
 
 <body>
-<div id="searching">Searching</div>
+<div style="white-space: pre;" id="searching">Searching</div>
 <div id="random_text"></div>
 </body>
 </html>
