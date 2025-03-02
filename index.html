@@ -8,7 +8,7 @@
 	<script>
 	function HandleEnterKey(event) {
 		if (event.key === "Enter") {
-			let inputValue = document.getElementById('search_bar_id').value.toLowerCase();
+			let inputValue = document.getElementById('search_bar_id').value.trim().toLowerCase();
 	
 			if (inputValue === "alien") {
 				window.location.href = "alien.html";
