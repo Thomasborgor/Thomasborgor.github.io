@@ -8,6 +8,7 @@
 	<script>
 	function HandleEnterKey(event) {
 		if (event.key === "Enter") {
+			alert(document.getElementById('search_bar_id').value)
 			if (document.getElementById('search_bar_id').value === "alien") {
 				window.location.href = "alien.html";
 			}
