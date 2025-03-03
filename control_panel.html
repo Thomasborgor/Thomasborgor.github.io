@@ -80,8 +80,14 @@
 		right: 60px;
 		bottom: 50%;
 		font-size: 20px;
+	}
 	
-	
+	#exit_ufo {
+		position: absolute;
+		right: 5%;
+		bottom: 5%;
+		font-size: 20px;
+		
 	}
 	
 </style>
@@ -116,17 +122,18 @@
 <div class="speedometer">
 	<p id="speedometer_value">25</p>
 	<img src="speed.jpg" alt="placeholder" style="width: 20%; height: 20%; ">
-	<button type="button" id="upButton" onclick="increaseSpeed()">Up</button>
-	<button type="button" id="downButton" onclick="decreaseSpeed()">Down</button>
+	<button type="button" id="upButton" onclick="increaseSpeed()">Faster</button>
+	<button type="button" id="downButton" onclick="decreaseSpeed()">Slower</button>
 </div>
 
 <div class="rotation-buttons">
-	<button type="button" onclick="rotateBackgroundLeft()">Rotate Left</button>
-	<button type="button" onclick="rotateBackgroundRight()">Rotate Right</button>
+	<button type="button" onclick="rotateBackgroundLeft()">Turn Left</button>
+	<button type="button" onclick="rotateBackgroundRight()">Turn Right</button>
 </div>
 
 <!-- Image to rotate -->
 <img id="backgroundImage" src="ufo.jpg" alt="Background Image">
 <button type="button" id="lightswitch" onclick="alert('its broken')">Lightswitch</button>
+<button type="button" id="exit_ufo" onclick="window.location.href = 'index.html'">Leave UFO</button>
 </body>
 </html>
