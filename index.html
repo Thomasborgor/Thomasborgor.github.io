@@ -14,30 +14,34 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 60px;
-            padding: 0 20px;
+            height: 8%;
             display: flex;
             align-items: center;
             z-index: 999;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .top_bar img {
-            height: 60px;
-            margin-right: 10%;
+			position: absolute;
+            height: 100%;
+            left: 2%;
         }
         .top_bar p {
             font-size: 22px;
-            margin-left: 10%;
         }
+	
+		
         .search_bar {
-            width: 120px;
-            padding: 8px;
+			position: absolute;
+            width: 50%;
+            height: 50%;
             font-size: 14px;
             border: 1px solid #ddd;
             border-radius: 5px;
             outline: none;
-            margin-left: 20px;
+			max-width: 10%;
+			right: 5%;
         }
+		
         body {
             font-family: 'Poppins', sans-serif;
             text-align: center;
@@ -46,7 +50,6 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            margin: 0;
             width: 100%;
             background-image: url('space.jpg');
             background-size: cover;
@@ -60,12 +63,14 @@
             background-color: rgba(255, 255, 255, 0.3);
             height: auto;
         }
+	
+		
         .form_signup {
             text-align: center;
         }
         p, h2 {
             width: 100%;
-            max-width: 800px;
+            max-width: 100%;
         }
     </style>
 </head>
