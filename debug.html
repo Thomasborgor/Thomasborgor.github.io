@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Size</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #output {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            padding: 20px;
+            border: 2px solid #333;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Screen Dimensions</h1>
+    <div id="output"></div>
+
+    <script>
+        function updateScreenSize() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('output').innerText = `Width: ${width}px, Height: ${height}px`;
+        }
+
+        // Initial update
+        updateScreenSize();
+
+        // Update on resize
+        window.addEventListener('resize', updateScreenSize);
+    </script>
+</body>
+</html>
