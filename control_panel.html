@@ -62,8 +62,8 @@ h1 {
 }
 
 .speedometer img {
-    width: clamp(120px, 20vw, 320px); /* Dynamic resizing */
-    height: auto;
+    min-width: 175px;
+	min-height: auto;
 	margin-left: -60vw;
 	margin-bottom: -4vh;
 }
@@ -96,7 +96,7 @@ h1 {
 #lightswitch {
     position: absolute;
     right: 7%;
-    bottom: 50%;
+    bottom: 37%;
     font-size: clamp(1rem, 2vw, 1.5rem);
     padding: 0.5rem 1rem;
 }
@@ -116,6 +116,10 @@ h1 {
         left: 5%;
         bottom: 10%;
     }
+	
+	.speedometer #speedometer_value {
+		margin-bottom: -7.7rem;
+	}
 
     .rotation-buttons {
         left: 20%;
@@ -124,7 +128,7 @@ h1 {
 
     #lightswitch {
         right: 5%;
-        bottom: 40%;
+        bottom: 34%;
     }
 
     #exit_ufo {
