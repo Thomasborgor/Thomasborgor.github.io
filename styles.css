@@ -32,7 +32,6 @@ body {
 .background_thingy {
 	position: absolute;
     width: 100%;
-	left: -8px;
     height: 500%;
     background-image: url('green.jpg'); 
     background-size: auto;
