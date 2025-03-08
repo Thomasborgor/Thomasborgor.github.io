@@ -1,0 +1,76 @@
+#top_bar {
+    position: fixed;
+    height: 60px;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    background-color: rgba(176, 224, 230, 0.65);
+    width: 100%;
+    z-index:999;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+}
+
+.links {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.links a {
+    margin: 10px 0; /* Adds spacing between each link */
+    display: inline-block; /* Prevents text from affecting other elements */
+    transition: transform 0.5s ease-in-out; /* Smooth animation */
+}
+
+html {
+    scroll-behavior: smooth;
+	background-image: url("green.jpg");
+}
+
+.bio {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal; /* Allows line breaks */
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Allow dynamic height */
+    background-color: lightgray; /* Just for visualization */
+    margin: 100px auto; /* Centers and adds spacing */
+    padding: 5px; /* Adds space inside the div */
+    border-radius: 10px; /* Slight rounded edges */
+    font-size: 10px;
+}
+
+
+.bio p {
+    margin-bottom: 10px; /* Adds spacing between paragraphs */
+}
+
+.links .assembly_link:hover {
+	transform: scale(1.2);
+}
+
+.links .bar_and_grill_link:hover {
+	transform: scale(1.2);
+
+}
+.links .tommyos_link:hover {
+	transform: scale(1.2);
+}
