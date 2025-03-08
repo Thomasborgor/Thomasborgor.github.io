@@ -46,16 +46,19 @@ links.forEach(link => {
             thingy2.style.backgroundImage = "url('./bar/space.jpg')";
             thingy2.style.width = "100%";
             thingy2.style.height = "350%";
+			thingy2.style.top = "-36rem";
         } else if (link.classList.contains("tommyos_link")) {
             thingy2.style.backgroundImage = "url('./cmosfstest/Untitled.jpg')";
             thingy2.style.height = "300%";
 			thingy2.style.width = "100%";
+			thingy2.style.top = "-12rem";
             thingy2.style.backgroundSize = "cover";
         } else if (link.classList.contains("assembly_link")) {
             thingy2.style.backgroundImage = "url('./assembly/assembly.jpg')";
             thingy2.style.height = "150%";
 			thingy2.style.width = "100%";
 			thingy2.style.backgroundSize = "cover";
+			thingy2.style.top = "-12rem";
         }
 
         thingy2.style.backgroundRepeat = "no-repeat";
@@ -75,6 +78,7 @@ links.forEach(link => {
             thingy2.style.backgroundSize = "auto";
             thingy2.style.width = "100%";
             thingy2.style.height = "auto";
+			thingy2.style.top = "-12rem";
         }, 500); // Matches the fade duration
     });
 });
