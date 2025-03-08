@@ -34,18 +34,28 @@ document.addEventListener("DOMContentLoaded", () => {
 	const thingy2 = document.getElementById("background_thingy");
 	thingy.textContent = messageArray[Math.floor(Math.random() * messageArray.length)];
 	
-	let fadeTimeout; // Tracks the pending background reset
+	let fadeTimeout; // Declare fadeTimeout outside so it can be cleared or reset properly
+let currentTimeout; // Track the current timeout
 
 links.forEach(link => {
     link.addEventListener("mouseover", () => {
-        clearTimeout(fadeTimeout); // Cancel any pending fade-out reset
-        
+        clearTimeout(currentTimeout); // Cancel any pending fade-out reset
+		
+        // Update styles based on the hovered link
         if (link.classList.contains("bar_and_grill_link")) {
             thingy2.style.backgroundImage = "url('./bar/space.jpg')";
+            thingy2.style.width = "100%";
+            thingy2.style.height = "350%";
         } else if (link.classList.contains("tommyos_link")) {
-            thingy2.style.backgroundImage = "url('./tommyos/logo.jpg')";
+            thingy2.style.backgroundImage = "url('./cmosfstest/Untitled.jpg')";
+            thingy2.style.height = "300%";
+			thingy2.style.width = "100%";
+            thingy2.style.backgroundSize = "cover";
         } else if (link.classList.contains("assembly_link")) {
             thingy2.style.backgroundImage = "url('./assembly/assembly.jpg')";
+            thingy2.style.height = "150%";
+			thingy2.style.width = "100%";
+			thingy2.style.backgroundSize = "cover";
         }
 
         thingy2.style.backgroundRepeat = "no-repeat";
@@ -54,15 +64,21 @@ links.forEach(link => {
     });
 
     link.addEventListener("mouseout", () => {
-		thingy2.style.opacity = "0"; // Start fade-out
-        fadeTimeout = setTimeout(() => {
+        // Start fade-out
+        thingy2.style.opacity = "0";
+
+        // Reset styles after 500ms if no new hover has occurred
+        currentTimeout = setTimeout(() => {
             thingy2.style.backgroundImage = "url('green.jpg')";
             thingy2.style.backgroundRepeat = "repeat";
+            thingy2.style.backgroundPosition = "center";
             thingy2.style.backgroundSize = "auto";
-            
+            thingy2.style.width = "100%";
+            thingy2.style.height = "auto";
         }, 500); // Matches the fade duration
     });
 });
+
 
 });
 
