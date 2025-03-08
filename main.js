@@ -51,7 +51,6 @@ links.forEach(link => {
         thingy2.style.backgroundRepeat = "no-repeat";
         thingy2.style.backgroundPosition = "center";
         thingy2.style.opacity = "1"; // Start fade-in
-		thingy2.style.left = "-8px;";
     });
 
     link.addEventListener("mouseout", () => {
@@ -60,7 +59,6 @@ links.forEach(link => {
             thingy2.style.backgroundImage = "url('green.jpg')";
             thingy2.style.backgroundRepeat = "repeat";
             thingy2.style.backgroundSize = "auto";
-			thingy2.style.left = "-8px;";
             
         }, 500); // Matches the fade duration
     });
