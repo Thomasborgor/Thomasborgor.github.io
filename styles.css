@@ -55,6 +55,7 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+	
 }
 
 
@@ -67,7 +68,7 @@ body {
 html {
     scroll-behavior: smooth;
 	background-image: url("green.jpg");
-	min-width: 100%;
+	max-width: 99.4976158%;
 }
 
 .bio {
