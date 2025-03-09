@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TommyOS</title>
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<h1>TommyOS</h1>
+<p>Welcome to the official TommyOS page!</p>
+<br>
+<p>TommyOS is a custom x86/16 bit operating system fully coded in assembly.</p>
+<p>The page below describes the installation progress, system requirements, and an entire documentation page on how to make your own programs.</p>
+<br><br><br>
+<h2>Installation and download</h2>
+<button type="button" style="border-radius: 3px;" onclick="window.open('./floppy.img')">Download TommyOS</button>
+<p>The file above is a virtual floppy disk image. To create a bootable floppy disk with TommyOS, first get a 1.44MB floppy disk.</p>
+<p>Then use a disk imaging tool like <em>Roadkil's Disk Image</em> and burn the image to the floppy.</p>
+<p>Once you have done that, pop the floppy into an <strong>IDE floppy drive</strong>. This is important.</p>
+<p>TommyOS runs on what are now legacy systems. Most modern x64 systems don't support booting from floppy disks or 16 bit assembly anymore.</p>
+<br><br><br>
+<h2>System requirements</h2>
+<p>TommyOS requires an x86 CPU, primarily a Pentium, but it doesn't matter.</p>
+<p>64 kilobytes or more of RAM,</p>
+<p>PS/2 keyboard,</p>
+<p>Built in speaker.</p>
+<br><br><br>
+<h2>Documentation</h2>
+<h3>Quick start</h3>
+<p>To get started with TommyOS as quickly as possible, just burn the image to a floppy and pop it in!</p>
+<p>Or, just run with any virtualization software like Qemu, VMware, or VirtualBox.</p>
+<p>On boot into the command line interface, type 'help' for a list of commands.</p>
+<p>Then type 'dir', and view all the preloaded files.</p>
+<p>In TommyOS, you can run .bin files by just typing their name. Each bin file gets one param, like for WRITE.BIN you type 'write test.txt', and you will create and start editing a file called test.txt.</p>
+<p>You can delete, rename, copy, and see the size of any almost any file in TommyOS.</p>
+<p>You can also view PCX images in the command line.</p>
+<br><br><br>
+<h3>File commands</h3>
+<p>Delete takes in one param, a file fully named and assumed to be in the present drive.</p>
+<p>Rename takes in two params, the first the original full filename, and the next is the altered filename. Assumed to be the present drive.</p>
+<p>Copy takes in two params. THe first params starts with 'driveLetter:filename.xxx' and the seconds follows the same structure.</p>
+<p>Replace 'driveLetter' with the ascii character of the drive like you would in Windows, assuming that A and B are floppy drives and C-Z are HDD's.</p>
+<p>Be sure to include the ':' next to the drive letter.</p>
+<p>Size takes in one param, the fully named file assumed at the present drive.</p>
+<br><br><br>
+<h3>Write.bin</h3>
+<p>Write is one of the types of executables that takes in param. It takes in the name of the file you want to edit.</p>
+<p>Write is not like Windows Notepad. You do not have insert like you would in a normal text editor, you can only overwrite.</p>
+<p>They are also formatted in CRLF, not CR, not LF. </p>
+<p>You have access to 6 pages (80x25) to write on. </p>
+<p>Press escape to leave the program without saving the file, and ~ to save the file and exit.</p>
+<h3>Basic.bin</h3>
+<p>Basic takes in a .tom file and runs it. You can create one in write. Or, you can make one on Windows and put in on a floppy disk and copy the file over.</p>
+</body>
+</html>

@@ -29,24 +29,57 @@ body {
 	background-size: auto;
 	transition: background-color 0.3s ease-in-out;
 }
-
-
 .background_thingy {
-	position: absolute;
+    position: absolute;
     width: 100%;
-	left: 0px;
-	top: -12rem;
-	height: auto;
-	height: auto;
-    background-image: url('green.jpg'); 
+    left: 0;
+    top: -12rem;
+    height: auto;
+    background-image: url('green.jpg'); /* Default background */
     background-size: auto;
     background-repeat: repeat;
     background-position: center;
-    opacity: 0;  /* Default visible */
-    z-index: -1; /* Behind content */
-	transition: opacity 0.3s ease-in-out;
-	overflow: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+    overflow: hidden;
 }
+
+/* Individual Background Classes */
+.bar_and_grill_bg {
+    background-image: url('./bar/space.jpg');
+    background-size: cover;
+    height: 350%;
+    top: -36rem;
+    background-repeat: no-repeat; /* Ensure it behaves as before */
+}
+
+.tommyos_bg {
+    background-image: url('./cmosfstest/Untitled.jpg');
+    background-size: cover;
+    height: 300%;
+    top: -12rem;
+    background-repeat: no-repeat; /* Ensure it behaves as before */
+}
+
+.assembly_bg {
+    background-image: url('./assembly/assembly.jpg');
+    background-size: auto;  /* Ensures natural size for proper tiling */
+    background-repeat: repeat;  /* 🔥 Tiling in both directions */
+    background-position: top left; /* Ensures proper alignment */
+    height: 200%;
+    width: 100%;
+    top: -12rem;
+}
+
+
+.green_bg {
+    background-image: url('green.jpg');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+
 
 
 
@@ -70,7 +103,7 @@ body {
 html {
     scroll-behavior: smooth;
 	background-image: url("green.jpg");
-	max-width: 99.4976158%;
+	display: flex;
 }
 
 .bio {
@@ -87,6 +120,8 @@ html {
     padding: 5px; /* Adds space inside the div */
     border-radius: 10px; /* Slight rounded edges */
     font-size: 10px;
+	
+
 }
 
 
