@@ -11,8 +11,7 @@ const messageArray = [
 	"did YOU sign up for leap win time this week?"
 ]
 document.addEventListener("DOMContentLoaded", () => {
-	window.location.href = "./sorry.jpg"; //placeholder
-	document.title = "Closed";
+	window.location.href = "./bar/index.html"; //placeholder
     const bio = document.querySelector(".bio");
 	const links = document.querySelectorAll(".links a");
     function scaleBio() {
