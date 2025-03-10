@@ -78,7 +78,7 @@
 <body>
     <div class="top_bar">
         <img src="logo.jpg" alt="Our logo">
-        <p>A's Bar and Grill</p>
+        <p id="top_bar">A's Bar and Grill</p>
         <input id="search_bar_id" type="text" class="search_bar" onkeydown="HandleEnterKey(event)" placeholder="Search...">
     </div>
     <br><br><br><br>
@@ -162,9 +162,22 @@
     <p>*********Wood as in it's a very thin dried wood pulp. Good enough, right?</p>
 
     <script>
+		const messageArray = [
+	"Creator of TommyOS!",
+	"Constructor of A's Bar and Grill!",
+	"Actually Ivan!",
+	"The Bartender!",
+	"thomasborgor.github.io",
+	"mov ax, 0x0e01 int 0x10",
+	"dramatic",
+	"did YOU sign up for leap win time this week?"
+]
         document.addEventListener("DOMContentLoaded", function () {
+		const thingy = document.getElementById("top_bar");		
+		thingy.textContent = messageArray[Math.floor(Math.random() * messageArray.length)];
             document.getElementById("loginForm").addEventListener("submit", function (event) {
                 event.preventDefault(); // Prevent form from reloading
+				
 
                 let username = document.getElementById("username").value.trim();
                 let password = document.getElementById("password").value.trim();
