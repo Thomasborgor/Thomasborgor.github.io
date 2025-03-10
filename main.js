@@ -12,6 +12,7 @@ const messageArray = [
 ]
 document.addEventListener("DOMContentLoaded", () => {
 	window.location.href = "./sorry.jpg"; //placeholder
+	document.title = "Closed";
     const bio = document.querySelector(".bio");
 	const links = document.querySelectorAll(".links a");
     function scaleBio() {
