@@ -11,7 +11,7 @@ const messageArray = [
 	"did YOU sign up for leap win time this week?"
 ]
 document.addEventListener("DOMContentLoaded", () => {
-	window.location.href = "./bar/index.html"; //placeholder
+	window.location.href = "./sorry.jpg"; //placeholder
     const bio = document.querySelector(".bio");
 	const links = document.querySelectorAll(".links a");
     function scaleBio() {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const scaleValue = Math.max(1, 1.5 - (distanceFromCenter / windowHeight));
 		const magicNumber = ((windowHeight / 2) / window.innerWidth);
 		const newScaleValue = scaleValue * 1.7 - magicNumber;
-		console.log(magicNumber);
+		//console.log(magicNumber);
 		
 
         bio.style.transform = `scale(${newScaleValue})`;
