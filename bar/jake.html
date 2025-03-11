@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hi</title>
+<style>
+    body {
+        height: 100vh; /* Full viewport height */
+        display: flex; /* Flexbox for easy centering */
+        align-items: center; /* Vertical centering */
+        justify-content: center; /* Horizontal centering */
+        margin: 0; /* Remove default body margin */
+    }
+
+    #jakesName {
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+<p id="jakesName">jake is!!!!!!</p>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    let fontSize = 20; // Starting font size
+    let sizeChange = 0.5;
+
+    function makeJakeHappy() {
+        const thingy = document.getElementById("jakesName");
+
+        if (fontSize >= 50) {
+            sizeChange = -0.5;
+        } else if (fontSize <= 10) {
+            sizeChange = 0.5;
+        }
+
+        fontSize += sizeChange;
+        thingy.style.fontSize = `${fontSize}px`;
+        console.log("hi");
+    }
+
+    setInterval(makeJakeHappy, 10);
+});
+</script>
+</html>
