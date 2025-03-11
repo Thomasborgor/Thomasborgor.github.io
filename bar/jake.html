@@ -14,10 +14,21 @@
     #jakesName {
         font-size: 20px;
     }
+	
+	#footnote {
+	
+	position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 10px; /* Optional for slight spacing from the edge */
+        transform-origin: bottom left; /* Ensures scaling happens from the bottom-left */
+		font-size: 10px;
+	}
 </style>
 </head>
 <body>
 <p id="jakesName">jake is!!!!!!</p>
+<p id="footnote">why are you looking down here?</p>
 </body>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
