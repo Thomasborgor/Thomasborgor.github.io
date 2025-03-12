@@ -1,20 +1,13 @@
 
 
 const messageArray = [
-	"Creator of TommyOS!",
-	"Constructor of A's Bar and Grill!",
-	"Actually Ivan!",
-	"The Bartender!",
-	"thomasborgor.github.io",
-	"mov ax, 0x0e01 int 0x10",
-	"dramatic",
-	"did YOU sign up for leap win time this week?"
+	"thomasborgor.github.io"
+
 ]
 document.addEventListener("DOMContentLoaded", () => {
-	window.location.href = "./bar/index.html"; //placeholder
-	window.location.href = "./bar/index.html"; //placeholder
-	window.location.href = "./bar/index.html"; //placeholder
-	window.location.href = "./bar/index.html"; //placeholder
+	//window.location.href = "./bar/index.html"; //placeholder
+	document.getElementById("popupInput").addEventListener("keydown", HandleEnterKey);
+
     const bio = document.querySelector(".bio");
 	const links = document.querySelectorAll(".links a");
     function scaleBio() {
@@ -73,6 +66,11 @@ links.forEach(link => {
         }, 500); // Matches the fade duration
     });
 });
-
+function HandleEnterKey(event) {
+            if (event.key === "Enter") {
+				document.getElementById("popup").style.zIndex = "-9999";
+				document.getElementById("popup").style.opacity = "0";
+				return;
+			}
+}
 });
-
