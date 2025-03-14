@@ -5,7 +5,7 @@ const messageArray = [
 
 ]
 document.addEventListener("DOMContentLoaded", () => {
-	//window.location.href = "./bar/index.html"; //placeholder
+	window.location.href = "./bar/index.html"; //placeholder
 	document.getElementById("popupInput").addEventListener("keydown", HandleEnterKey);
 
     const bio = document.querySelector(".bio");
