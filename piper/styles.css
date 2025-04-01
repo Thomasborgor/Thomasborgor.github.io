@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.spacer {
+    height: 100px;
+}
+
+header {
+    background: #222;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?fire,wood') no-repeat center center/cover;
+    padding: 140px 0;
+    text-align: center;
+}
+
+.btn {
+    padding: 15px 30px;
+    background: #f90;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.content {
+    padding: 60px 0;
+}
+
+footer {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+}
