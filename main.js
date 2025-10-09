@@ -5,7 +5,7 @@ const messageArray = [
 
 ]
 document.addEventListener("DOMContentLoaded", () => {
-	window.location.href = "./aud/index.html"; //placeholder
+	window.location.href = "./secret/index.html"; //placeholder
 	document.getElementById("popupInput").addEventListener("keydown", HandleEnterKey);
 
     const bio = document.querySelector(".bio");
@@ -74,5 +74,6 @@ function HandleEnterKey(event) {
 			}
 }
 });
+
 
 
